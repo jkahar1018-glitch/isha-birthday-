@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Isha 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Poppins,sans-serif;background:#09050d;color:#fff}
+#app{position:relative;width:100%;height:100vh;overflow:hidden;background:
+radial-gradient(circle at 50% 45%,#70234e 0,#321127 30%,#130814 68%,#07040a 100%)}
+.scene{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;opacity:0;visibility:hidden;transform:scale(1.06);transition:opacity 1s,transform 1.2s,visibility 1s;z-index:5}
+.scene.active{opacity:1;visibility:visible;transform:scale(1)}
+.scene-inner{width:min(92vw,700px)}
+.intro-small{font-size:11px;letter-spacing:5px;text-transform:uppercase;color:#ffb8d3;opacity:.9}
+.intro-title{font-family:'Great Vibes',cursive;font-size:clamp(68px,17vw,145px);font-weight:400;line-height:.8;margin:25px 0 20px;text-shadow:0 0 35px #ff5d9d}
+.intro-sub{font-size:14px;color:#ffdbe8;animation:pulse 2s infinite}
+.name{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(75px,20vw,155px);line-height:.8;margin:15px 0;color:#ff9fc4;text-shadow:0 0 25px #ff4f96,0 0 70px #ff4f9666}
+.date{display:inline-block;padding:9px 20px;border:1px solid #ffffff35;border-radius:999px;background:#ffffff10;color:#ffe6ef;font-size:13px}
+.cake{font-size:105px;margin:25px 0 10px;filter:drop-shadow(0 0 25px #ff80b5);animation:cakeFloat 2.8s ease-in-out infinite}
+.candle{display:inline-block}
+.scene h2{font-family:'Great Vibes',cursive;font-size:clamp(52px,12vw,90px);font-weight:400;margin:0 0 8px}
+.scene p{font-size:14px;line-height:1.8;color:#ffe4ee}
+.main-btn{margin-top:18px;border:0;border-radius:999px;padding:15px 30px;font:700 14px Poppins;color:#45132c;background:linear-gradient(135deg,#fff,#ffc8df);box-shadow:0 12px 45px #ff5c9d66;cursor:pointer;transition:.25s}
+.main-btn:hover{transform:scale(1.06);box-shadow:0 15px 60px #ff5c9daa}
+.skip{position:absolute;bottom:22px;right:22px;z-index:20;background:#ffffff12;border:1px solid #ffffff22;color:#fff;border-radius:999px;padding:8px 14px;font-size:11px;cursor:pointer}
+.progress{position:absolute;top:18px;left:50%;transform:translateX(-50%);z-index:30;display:flex;gap:6px}
+.progress i{width:25px;height:3px;border-radius:4px;background:#ffffff25;transition:.5s}
+.progress i.on{background:#ff9fc4;box-shadow:0 0 10px #ff78ad}
+.layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:twinkle 2s infinite}
+.heart{position:absolute;bottom:-40px;animation:rise linear forwards;opacity:0}
+.petal{position:absolute;top:-30px;width:10px;height:15px;border-radius:80% 20%;background:#ff8bb8;animation:fall linear forwards;opacity:.75}
+.balloon{position:absolute;bottom:-130px;font-size:55px;animation:balloonUp 11s linear forwards}
+.light{position:absolute;width:35vw;height:35vw;border-radius:50%;background:#ff4f9620;filter:blur(45px);left:50%;top:50%;transform:translate(-50%,-50%);animation:lightPulse 4s infinite}
+.firework{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;animation:boom 1.1s ease-out forwards}
+.letter-wrap{margin:auto;width:min(92vw,520px);padding:3px;border-radius:30px;background:linear-gradient(135deg,#ff9fc4,#7d2856,#ffdae8);box-shadow:0 25px 100px #000b}
+.letter{padding:35px 27px;border-radius:27px;background:linear-gradient(145deg,#591b40,#211021);position:relative}
+.letter .emoji{font-size:58px}
+.letter h3{font-family:'Great Vibes',cursive;font-size:57px;font-weight:400;margin:8px 0;color:#fff}
+.letter p{font-size:14px;line-height:1.9;color:#ffe8f0}
+.signature{font-family:'Great Vibes',cursive;font-size:34px;color:#ffabc9;margin-top:18px}
+.final-title{font-family:'Great Vibes',cursive;font-size:clamp(65px,16vw,120px);font-weight:400;color:#ffb1ce;text-shadow:0 0 35px #ff4f96}
+.final-sub{font-size:13px;color:#ffe2ed}
+.replay{margin-top:18px}
+@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.8)}}
+@keyframes rise{0%{transform:translateY(0) rotate(0) scale(.6);opacity:0}12%{opacity:.85}100%{transform:translateY(-115vh) translateX(80px) rotate(35deg) scale(1.1);opacity:0}}
+@keyframes fall{to{transform:translateY(115vh) translateX(100px) rotate(520deg)}}
+@keyframes balloonUp{0%{transform:translateY(0) rotate(-8deg);opacity:0}10%{opacity:1}100%{transform:translateY(-125vh) rotate(12deg);opacity:0}}
+@keyframes lightPulse{50%{transform:translate(-50%,-50%) scale(1.35);opacity:.8}}
+@keyframes cakeFloat{50%{transform:translateY(-12px) rotate(1deg)}}
+@keyframes pulse{50%{opacity:.45}}
+@keyframes boom{0%{transform:scale(.2);opacity:1;box-shadow:0 0 0 0 #fff}70%{opacity:1}100%{transform:scale(18);opacity:0;box-shadow:0 0 45px 8px #ff9fc4}}
+@media(max-width:500px){.intro-small{letter-spacing:3px}.scene p{font-size:13px}.letter{padding:28px 20px}}
+</style>
+</head>
+<body>
+<div id="app">
+<div class="light"></div>
+<div class="layer" id="stars"></div>
+<div class="layer" id="hearts"></div>
+<div class="layer" id="petals"></div>
+<div class="layer" id="balloons"></div>
+<div class="layer" id="fireworks"></div>
+
+<div class="progress" id="progress"></div>
+
+<section class="scene active" id="s0">
+<div class="scene-inner">
+<div class="intro-small">A little surprise is waiting...</div>
+<div class="intro-title">For You ✨</div>
+<div class="intro-sub">Tap the button to begin</div>
+<button class="main-btn" onclick="nextScene()">Begin the Surprise 💗</button>
+</div>
+</section>
+
+<section class="scene" id="s1">
+<div class="scene-inner">
+<div class="intro-small">Today is a very special day</div>
+<div class="name">Isha</div>
+<div class="date">30 September 2026</div>
+<p>Because someone wonderful deserves a wonderful birthday. 🌸</p>
+<button class="main-btn" onclick="nextScene()">Continue ✨</button>
+</div>
+</section>
+
+<section class="scene" id="s2">
+<div class="scene-inner">
+<div class="intro-small">Make a wish...</div>
+<div class="cake">🎂</div>
+<h2>Happy Birthday!</h2>
+<p>May your day sparkle with happiness,<br>love, laughter and beautiful memories. 💕</p>
+<button class="main-btn" onclick="nextScene();fireworks()">Make It Magical 🎆</button>
+</div>
+</section>
+
+<section class="scene" id="s3">
+<div class="scene-inner">
+<div class="letter-wrap">
+<div class="letter">
+<div class="emoji">💌</div>
+<h3>To Isha 💕</h3>
+<p>
+Happy Birthday! 🎉<br><br>
+Wishing you a beautiful day filled with love, laughter,
+happiness and lots of unforgettable moments. ✨<br><br>
+May all your beautiful wishes come true,
+and may this new year of your life bring you
+many reasons to smile. 💗
+</p>
+<div class="signature">Have a wonderful birthday! 🌸</div>
+</div>
+</div>
+<button class="main-btn" onclick="nextScene();fireworks()">One Last Surprise 🎆</button>
+</div>
+</section>
+
+<section class="scene" id="s4">
+<div class="scene-inner">
+<div class="intro-small">With lots of love</div>
+<div class="final-title">Happy Birthday Isha 💗</div>
+<div class="final-sub">30 September 2026 · Make beautiful memories ✨</div>
+<button class="main-btn replay" onclick="location.reload()">Watch Again 🔄</button>
+</div>
+</section>
+
+<button class="skip" onclick="nextScene()">Skip →</button>
+</div>
+
+<script>
+let current=0;
+const scenes=[...document.querySelectorAll('.scene')];
+const progress=document.querySelector('#progress');
+scenes.forEach((_,i)=>{const x=document.createElement('i');if(i===0)x.className='on';progress.appendChild(x)});
+function update(){
+ scenes.forEach((s,i)=>s.classList.toggle('active',i===current));
+ [...progress.children].forEach((x,i)=>x.classList.toggle('on',i===current));
+ if(current===1) balloons();
+ if(current===2) fireworks();
+ if(current===4){for(let i=0;i<3;i++)setTimeout(fireworks,i*600)}
+}
+function nextScene(){
+ if(current<scenes.length-1){current++;update()}
+}
+const stars=document.querySelector('#stars');
+for(let i=0;i<85;i++){
+ const s=document.createElement('i');s.className='star';
+ s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+ s.style.animationDelay=Math.random()*2+'s';stars.appendChild(s)
+}
+const hearts=document.querySelector('#hearts');
+function heart(){
+ const h=document.createElement('span');h.className='heart';
+ h.textContent=['💗','💕','💖','♡'][Math.floor(Math.random()*4)];
+ h.style.left=Math.random()*100+'%';h.style.fontSize=14+Math.random()*23+'px';
+ h.style.animationDuration=5+Math.random()*5+'s';hearts.appendChild(h);
+ setTimeout(()=>h.remove(),11000)
+}
+setInterval(heart,500);
+
+const petals=document.querySelector('#petals');
+function petal(){
+ const p=document.createElement('i');p.className='petal';
+ p.style.left=Math.random()*100+'%';p.style.animationDuration=5+Math.random()*5+'s';
+ petals.appendChild(p);setTimeout(()=>p.remove(),11000)
+}
+setInterval(petal,700);
+
+const balloonsLayer=document.querySelector('#balloons');
+function balloons(){
+ for(let i=0;i<10;i++){
+  setTimeout(()=>{
+   const b=document.createElement('span');b.className='balloon';
+   b.textContent=['🎈','🎈','💗','🎈'][Math.floor(Math.random()*4)];
+   b.style.left=Math.random()*100+'%';b.style.animationDuration=8+Math.random()*6+'s';
+   balloonsLayer.appendChild(b);setTimeout(()=>b.remove(),15000)
+  },i*250)
+ }
+}
+
+const fw=document.querySelector('#fireworks');
+function fireworks(){
+ for(let i=0;i<12;i++){
+  setTimeout(()=>{
+   const f=document.createElement('i');f.className='firework';
+   f.style.left=(15+Math.random()*70)+'%';f.style.top=(15+Math.random()*55)+'%';
+   f.style.animationDelay=(Math.random()*.15)+'s';fw.appendChild(f);
+   setTimeout(()=>f.remove(),1300)
+  },i*90)
+ }
+}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key==='ArrowRight')nextScene()});
+</script>
+</body>
+</html>
